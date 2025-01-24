@@ -1,6 +1,6 @@
 {
   "name": "ansi-chart",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight and simple tool for rendering beautiful charts directly in your terminal using only ANSI-compatible ASCII characters. Create bar charts, line graphs, and more with customizable styles, all without external dependencies. Perfect for CLI applications, monitoring scripts, or just adding some visual flair to your terminal outputs!",
   "scripts": {
     "start": "npm run build && node dist/index.js",
