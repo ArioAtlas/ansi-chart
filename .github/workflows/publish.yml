@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
@@ -34,6 +34,9 @@ jobs:
           git push --follow-tags origin HEAD:main
 
       - name: Publish to npm
-        run: npm publish
+        run: |
+          npm run build
+          cp dist/* ./
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
