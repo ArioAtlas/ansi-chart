@@ -22,7 +22,10 @@
     "visual",
     "line"
   ],
-  "author": "Omid Golshan",
+  "author": {
+		"name": "Omid Golshan",
+		"email": "omid.gt21@gmail.com"
+	},
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ArioAtlas/ansi-chart/issues"
