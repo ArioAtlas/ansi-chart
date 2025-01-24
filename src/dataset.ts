@@ -3,7 +3,7 @@ type Cell = number;
 export class Dataset {
   private values: Array<Array<Cell>>;
   constructor(values?: Array<Array<Cell>>) {
-    if (!values) this.values = new Array();
+    if (!values) this.values = [];
     else this.values = values;
   }
 
@@ -12,9 +12,7 @@ export class Dataset {
   }
 
   public columns(indices: number[]): Dataset {
-    return new Dataset(
-      this.values.map((v) => v.filter((v, i) => indices.includes(i)))
-    );
+    return new Dataset(this.values.map((v) => v.filter((v, i) => indices.includes(i))));
   }
 
   public row(index: number): Array<Cell> {
@@ -72,7 +70,7 @@ export class Dataset {
     return this._mean(
       col.map(function (num) {
         return Math.pow(num - mean, 2);
-      })
+      }),
     );
   }
 

@@ -4,9 +4,9 @@ import chalk from 'chalk';
 export class LineChart {
   constructor(private readonly config: PlotConfig & { xLabel: string; yLabel: string }) {}
 
-  public plot(data: number[][], color: string) {
+  public plot(data: number[][] | number[], color: string) {
     const xArray = Array.isArray(data[0]) ? data.map((v) => v[0]) : data.map((v, i) => i);
-    const yArray = data.map((v) => v[1]);
+    const yArray = Array.isArray(data[0]) ? data.map((v) => v[1]) : data.map((v) => v);
 
     const chart = plot(yArray, this.config);
     // determine the overall width of the plot (in characters)

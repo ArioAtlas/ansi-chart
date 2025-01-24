@@ -3,7 +3,7 @@ import ervy from 'ervy';
 
 export class ScatterPlot {
   private chart = ervy;
-  private colors = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'];
+  private colors = ['green', 'red', 'blue', 'yellow', 'magenta', 'cyan', 'white'];
 
   constructor(private readonly options?: { pointChar?: string }) {}
 
